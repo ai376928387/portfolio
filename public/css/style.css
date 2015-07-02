@@ -21,7 +21,7 @@ body{
   color:#fff;
 }
 .header .navbar-nav>li>a:hover{
-  background-color:#04232b;
+  background-color:#000;
 }
 .head-col{
     padding: 20px 20px;
@@ -36,9 +36,9 @@ body{
   overflow: hidden;
   margin-bottom: 20px;
   background: #fff;
-  -webkit-box-shadow: 1px 1px 2px 0 #417D87;
-  -moz-box-shadow: 1px 1px 2px 0 #417D87;
-  box-shadow: 1px 1px 2px 0 #417D87;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
   border-radius: 5px;
 }
 .sidebar h2{
