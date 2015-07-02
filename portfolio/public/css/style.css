@@ -1,0 +1,64 @@
+body{
+  background-color: #e8dfd6;
+}
+
+.header{
+  background:#042C36;
+}
+.navbar-header{
+/*    margin-top:28px;*/
+}
+.menu{
+/*    margin-top: 20px;*/
+}
+.header ul{
+    
+}
+.header ul li{
+    color:#042c36; 
+}
+.header ul a{
+  color:#fff;
+}
+.header .navbar-nav>li>a:hover{
+  background-color:#04232b;
+}
+.head-col{
+    padding: 20px 20px;
+}
+
+/* sidebar homepage */
+.widget{
+  font-size: 12px;
+  color: #417D87;
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 2px 0 #417D87;
+  -moz-box-shadow: 1px 1px 2px 0 #417D87;
+  box-shadow: 1px 1px 2px 0 #417D87;
+  border-radius: 5px;
+}
+.sidebar h2{
+  padding: 10px;
+  color: #417D87;
+  font-family: 'Fauna One',serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  margin-top: 0;
+  border-bottom: 1px solid #417D87;
+}
+.widget-content{
+  padding: 7px;
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+.widget-content .profile-img{
+  margin:0 auto;
+}
