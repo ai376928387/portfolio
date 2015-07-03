@@ -1,26 +1,60 @@
 <div class="header">	
 	<div class="container">
-		<nav class="navbar-header">
-			<ul class="nav navbar-nav">	
-		        <li>
-					<a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-		        </li>
-		        <li>
-		        	<a href="#" class="active">Home <span class="sr-only">(current)</span></a>
-		        </li>
-		        <li><a href="#">Portfolio</a></li>
-		     	<li><a href="#">Resume</a></li>
-		     	<li><a href="#">Skills</a></li>
-		     	<li><a href="#">About& Contact</a></li>
-		      </ul>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<nav class="navbar-header">
+				<ul class="nav navbar-nav">	
+			        <li>
+						<a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+			        </li>
+			        <li>
+			        	<a href="#" class="active">Home <span class="sr-only">(current)</span></a>
+			        </li>
+			        <li><a href="#">Portfolio</a></li>
+			     	<li><a href="#">Resume</a></li>
+			     	<li><a href="#">Skills</a></li>
+			     	<li><a href="#">About& Contact</a></li>
+			    </ul>
+			</nav>	
 
-			<ul class="nav nav-pills navbar-right">
-				<li><a href="https://www.facebook.com/gao.benny"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="https://www.linkedin.com/profile/view?id=373946568"><i class="fa fa-linkedin"></i></a></a></li>
-				<li><a href="https://twitter.com/followers"> <i class="fa fa-twitter"></i></a></li>
+			<div class="social">
+				<ul class="nav nav-pills navbar-right">
+					<li class="facebook">
+						<a href="https://www.facebook.com/gao.benny" target="_blank">
+							<i class="fa fa-facebook fa-2x"></i>
+						</a>
+					</li>
+					<li class="twitter">
+						<a href="https://twitter.com/BeiniGao"  target="_blank"> 
+							<i class="fa fa-twitter fa-2x"></i>
+						</a>
+					</li>
+					<li class="linkedin">
+						<a href="https://www.linkedin.com/profile/view?id=373946568"  target="_blank"> 
+							<i class="fa fa-linkedin fa-2x"></i>
+						</a>
+					</li>
+					<li class="github">
+						<a href="https://github.com/ai376928387"  target="_blank"> 
+							<i class="fa fa-github fa-2x"></i>
+						</a>
+					</li>
+				</ul>
 
-			</ul>
-		</nav>	
+				<div class="clearfix"></div>
+
+			</div>
+
+
+			<form action="/search" class="navbar-form navbar-right search-bar" method="get" role="search">
+				<div class="form-group">
+					<input class="form-control form-main-search" name="q" placeholder="Search" type="text">
+				</div>
+				<button class="btn btn-def" type="submit">
+				              Submit
+	            </button>
+			</form>
+
+		</div>
 	</div>
 </div>	
 

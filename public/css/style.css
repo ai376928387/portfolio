@@ -1,9 +1,11 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 body{
   background-color: #e8dfd6;
 }
 
 .header{
   background:#042C36;
+  height: 50px;
 }
 .navbar-header{
 /*    margin-top:28px;*/
@@ -21,10 +23,84 @@ body{
   color:#fff;
 }
 .header .navbar-nav>li>a:hover{
-  background-color:#000;
+  background-color:#04232b;
 }
 .head-col{
     padding: 20px 20px;
+}
+
+/* social media button*/
+.social{
+  float:right;
+}
+.social ul {
+  float:right;
+  list-style: none;
+  color: #000;
+}
+.social ul li {
+  float: left;
+}
+.social ul li a {
+  position: relative;
+  float: left;
+  background: #005f74;
+  width: 40px; height: 72px;
+  text-align: center;
+  color: #000;
+  padding: 0 0 20px 0;
+}
+.social ul li a:hover {
+  color: #fff;
+}
+.fa-facebook, .fa-twitter, .fa-github, .fa-linkedin {
+  padding: 12px 0 0 0;
+  color:#fff;
+}
+
+/* Pseudo Elements */
+.social ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0px; left: 0;
+  width: 1px; height: 1px;
+  border: 20px solid transparent;
+  border-bottom: 20px solid #e8dfd6;
+  z-index: 0;
+}
+
+/* Hover */
+.social ul li.facebook a:hover {
+  background: #3b5998;
+}
+.social ul li.twitter a:hover {
+  background: #44ccf6;
+}
+.social ul li.github a:hover {
+  background: #000000;
+}
+.social ul li.linkedin a:hover {
+  background: #1c66c2; 
+}
+
+/*search bar*/
+.search-bar{
+  border-color: #e7e7e7;
+  margin-right: 20px;
+}
+.btn-def{
+  width: 16px;
+  height: 17px;
+  background: url(http://3.bp.blogspot.com/-F6JS0gzLxag/UwI54vaUTlI/AAAAAAAAATE/EEQ-eSyg-yc/s1600/search.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  text-shadow: none;
+  color: transparent;
+  border: none;
+  background-color: transparent;
+  z-index: 671;
+  margin-left: -30px;
 }
 
 /* sidebar homepage */
@@ -51,7 +127,7 @@ body{
   margin-bottom: 6px;
   text-transform: uppercase;
   margin-top: 0;
-  border-bottom: 1px solid #417D87;
+  border-bottom: 1px solid #e8dfd6;
 }
 .widget-content{
   padding: 7px;
