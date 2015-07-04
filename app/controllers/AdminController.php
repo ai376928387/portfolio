@@ -18,7 +18,7 @@ class AdminController extends BaseController {
 	public function getLogin() {
 		return View::make('admin.login');
 	}
-	public function postLogin(){
+	/*public function postLogin(){
 		$validator = Validator::make(Input::all(),
 			array(
 				'username' => 'required',
@@ -46,5 +46,5 @@ class AdminController extends BaseController {
 					return Redirect::route('admin_login')
 					->with('global','There was a problem signing you');			
 				}
-		}
+		}*/
 }

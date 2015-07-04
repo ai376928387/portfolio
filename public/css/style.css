@@ -121,7 +121,7 @@ body{
 .sidebar h2{
   padding: 10px;
   color: #417D87;
-  font-family: 'Fauna One',serif;
+  font-family: ;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2em;
@@ -130,6 +130,80 @@ body{
   margin-top: 0;
   border-bottom: 1px solid #e8dfd6;
 }
+.sidebar h3{
+  color: #417D87;
+  font-family: ;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.0em;
+  margin:4px 0;
+}
+.sidebar .btn-primary{
+  background-color: #005f74;
+  border-color:#005f74;
+}
+.sidebar .more-info{
+  float:right;
+  margin-right:20px;
+}
+.sidebar a{
+  color:#fff;
+}
+.sidebar a:hover{
+  text-decoration: none;
+}
+.profile {
+  background: #d0d0d0;
+  border: 1px solid #b9b9b9;
+  border-radius: 130px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  padding:4px;
+  width: 130px;
+  height: 130px;
+}
+.profile:hover{
+  background: #272123;
+  border: 1px solid #272123;
+}
+.profile header{
+  mask-image: url('../images/portfolio-mask.png');
+  -webkit-mask-image: url('../images/portfolio-mask.png');
+  -o-mask-image: url('../images/portfolio-mask.png');
+  -moz-mask-image: url('../images/portfolio-mask.png');
+  position: relative;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.profile header .details{
+  background: #272123;
+  background: rgba(39,33,35,0.9);
+  padding: 10px 0;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  width: 120px;
+  height: 40px;
+}
+.profile:hover header .details{
+  top:90px;
+}
+.sidebar .profile-img img{
+  border-radius: 120px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
 .widget-content{
   padding: 7px;
   margin: 0;
@@ -137,5 +211,5 @@ body{
   color: gray;
 }
 .widget-content .profile-img{
-  margin:0 auto;
+  text-align: center;
 }
