@@ -1,6 +1,7 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 body{
   background-color: #e8dfd6;
+  background: url(../images/pattern-noise.png);
 }
 
 .header{
@@ -44,7 +45,7 @@ body{
 .social ul li a {
   position: relative;
   float: left;
-  background: #005f74;
+  background:-webkit-gradient(linear, 0 0, 0 bottom, from(#005f74), to(rgba(240, 230, 220, 0.5)));
   width: 40px; height: 72px;
   text-align: center;
   color: #000;
@@ -65,7 +66,7 @@ body{
   bottom: 0px; left: 0;
   width: 1px; height: 1px;
   border: 20px solid transparent;
-  border-bottom: 20px solid #e8dfd6;
+  border-bottom: 20px solid #F3EBE5;
   z-index: 0;
 }
 
