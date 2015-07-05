@@ -14,11 +14,48 @@ class AdminController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+	public function getCreate() {
+		return View::make('admin.create');
+	}
+
+	public function postCreate() {
+		$validator= Validator::make(Input::all(),
+		array(
+			'username' 		 => 'required|max:20|min:3|unique:users',
+			'password' 		 => 'required|min:6',
+			)
+		);
+
+		if ($validator->fails()){
+			return Redirect::route('account-create')
+				->withErrors($validator)
+				->withInput();
+		}else{
+			$username	=Input::get('username');
+			$password 	=Input::get('password');
+
+			$user 	 	=User::create(array(
+				'username' => $username,
+				'password' => Hash::make($password),
+				));
+
+			if($user){
+				return Redirect::route('admin_login')
+						->with('global','your account has been created,please sign in');
+			}else{
+				return Redirect::route('account-create')
+				->with('global','register unsuccessfully');	
+			}
+		}
+	}
+
 
 	public function getLogin() {
 		return View::make('admin.login');
 	}
 	public function postLogin(){
+		$username=Input::get('username');
+		$password=Input::get('password');
 		$validator = Validator::make(Input::all(),
 			array(
 				'username' => 'required',
@@ -31,23 +68,20 @@ class AdminController extends BaseController {
 					->withInput();
 			}else{
 
-				$remember = (Input::has('remember'))?true:false;
-
-				$auth =Auth::attempt(array(
-					'username' => Input::get('username'),
-					'password' => Input::get('password')
-					),$remember);
-
-				if($auth){
+				if(Auth::attempt(array('username' => $username,'password' => $password)))
+				{
 					return Redirect::intended('/admin');
 				}else{
 					return Redirect::route('admin_login')
-					->with('global','There was a problem signing you');			
+					->with('global','You username or password is not correct');			
 				}
 			}
-			printf('error');
 			return Redirect::route('admin_login')
-			->with('global','There was a problem signing you');
+			->with('global','There was a problem signing you yyyy');
+	}
+	public function getSignOut() {
+		Auth::logout();
+		return Redirect::route('home');
 	}
 	public function getDashboard(){
 		return View::make('admin.dashboard');

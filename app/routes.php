@@ -18,12 +18,18 @@ Route::get('/', array('as' =>'home','uses' =>'homecontroller@home'));
 
 /*unauthenticated group*/
 Route::group(array('before' => 'guest'), function() {
-	//login in
+	//log in
 	Route::get('/admin-sign-in',array('as'=>'admin_login','uses' => 'AdminController@getLogin'));
+	Route::get('/admin-create', array('as' => 'account-create','uses' => 'AdminController@getCreate'));
+	
+	/*CSRF PROTECTION GROUP*/
 	Route::group(array('before' => 'csrf'), function() {
+		Route::post('/admin-create', array('as' => 'account-create-post','uses' => 'AdminController@postCreate'));
 		Route::post('/admin-sign-in',array('as'=>'admin_login_post','uses' => 'AdminController@postLogin'));	
 	});
+});
+
+Route::group(array('before'=>'auth'),function(){
 	//admin main page
 	Route::get('/admin',array('as'=>'admin-home','uses'=>'AdminController@getDashboard'));
 });
-	
