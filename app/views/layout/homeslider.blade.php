@@ -12,16 +12,15 @@
 	    <div class="item active">
 	      <img src="..." alt="...">
 	      <div class="carousel-caption">
-	        ...
+	        HERE IS DESCRIPTION
 	      </div>
 	    </div>
 	    <div class="item">
 	      <img src="..." alt="...">
 	      <div class="carousel-caption">
-	        ...
+	        HERE IS DESCRIPTION
 	      </div>
 	    </div>
-	    ...
 	  </div>
 
 	  <!-- Controls -->

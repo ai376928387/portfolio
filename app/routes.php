@@ -29,7 +29,10 @@ Route::group(array('before' => 'guest'), function() {
 	});
 });
 
+//Authenticated g
 Route::group(array('before'=>'auth'),function(){
 	//admin main page
 	Route::get('/admin',array('as'=>'admin-home','uses'=>'AdminController@getDashboard'));
+	//get sign out
+	Route::get('/account/signout',array('as' => 'account-sign-out','uses' => 'AdminController@getSignOut')); 
 });

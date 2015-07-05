@@ -213,3 +213,14 @@ body{
 .widget-content .profile-img{
   text-align: center;
 }
+
+/*admin page*/
+.dashboard h3{
+  color:#fff;
+}
+.dashboard button{
+  background-color: #005f74;
+}
+.dashboard button a{
+  color:#fff;
+}
