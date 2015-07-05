@@ -121,7 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+			//服务提供器 
+		'Intervention\Image\ImageServiceProvider',
 	),
 
 	/*
@@ -188,7 +189,10 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		//别名配置
+		'Image' => 'Intervention\Image\Facades\Image'
 	),
+
+
 
 );

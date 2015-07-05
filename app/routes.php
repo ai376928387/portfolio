@@ -35,4 +35,10 @@ Route::group(array('before'=>'auth'),function(){
 	Route::get('/admin',array('as'=>'admin-home','uses'=>'AdminController@getDashboard'));
 	//get sign out
 	Route::get('/account/signout',array('as' => 'account-sign-out','uses' => 'AdminController@getSignOut')); 
+	//add slider image
+	Route::get ('/admin/add-slider-images',array('as'=>'add-slider-images','uses'=>'AdminController@getAddImg'));
+	/*CSRF PROTECTION GROUP*/
+	Route::group(array('before' => 'csrf'), function() {
+		Route::post ('/admin/add-slider-images',array('as'=>'add-slider-images-post','uses'=>'AdminController@postAddImg'));
+		});
 });

@@ -86,4 +86,21 @@ class AdminController extends BaseController {
 	public function getDashboard(){
 		return View::make('admin.dashboard');
 	}
+	public function getAddImg(){
+		return View::make('admin.addImg');
+	}
+	public function postAddImg(){
+		//image upload
+		$move = Input::file('images')->move('uploadfiles',Input::file('images')->getClientOriginalName());
+
+		if($move){
+			$sliderImage =SliderImage::create(array(
+			'title' => Input::get('title'),
+			'description' => Input::get('description'),
+			'image_name'=>Input::file('images')->getClientOriginalName(),
+			));
+			return Redirect::route('add-slider-images')
+						->with('global','Image uploaded successfully');
+		}
+	}
 }
