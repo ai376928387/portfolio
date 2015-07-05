@@ -17,13 +17,13 @@ Route::get('/', array('as' =>'home','uses' =>'homecontroller@home'));
 //admin page
 
 /*unauthenticated group*/
-Route::group(array('before' => 'auth'), function() {
+Route::group(array('before' => 'guest'), function() {
 	//login in
-	Route::get('/admin',array('as'=>'admin_login','uses' => 'AdminController@getLogin'));
+	Route::get('/admin-sign-in',array('as'=>'admin_login','uses' => 'AdminController@getLogin'));
 	Route::group(array('before' => 'csrf'), function() {
-		Route::post('/admin',array('as'=>'admin_login_post','uses' => 'AdminController@postLogin'));	
+		Route::post('/admin-sign-in',array('as'=>'admin_login_post','uses' => 'AdminController@postLogin'));	
 	});
 	//admin main page
-	Route::get('/admin',array('as'=>'admin-home','uses'=>'AdminController@getHome'));
+	Route::get('/admin',array('as'=>'admin-home','uses'=>'AdminController@getDashboard'));
 });
 	

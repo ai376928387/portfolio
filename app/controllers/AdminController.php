@@ -18,7 +18,7 @@ class AdminController extends BaseController {
 	public function getLogin() {
 		return View::make('admin.login');
 	}
-	/*public function postLogin(){
+	public function postLogin(){
 		$validator = Validator::make(Input::all(),
 			array(
 				'username' => 'required',
@@ -35,9 +35,7 @@ class AdminController extends BaseController {
 
 				$auth =Auth::attempt(array(
 					'username' => Input::get('username'),
-					'password' => Input::get('password'),
-					'active' => 1,
-					'is_admin' => 1
+					'password' => Input::get('password')
 					),$remember);
 
 				if($auth){
@@ -46,5 +44,12 @@ class AdminController extends BaseController {
 					return Redirect::route('admin_login')
 					->with('global','There was a problem signing you');			
 				}
-		}*/
+			}
+			printf('error');
+			return Redirect::route('admin_login')
+			->with('global','There was a problem signing you');
+	}
+	public function getDashboard(){
+		return View::make('admin.dashboard');
+	}
 }

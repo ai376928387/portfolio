@@ -4,10 +4,10 @@
 			<nav class="navbar-header">
 				<ul class="nav navbar-nav">	
 			        <li>
-						<a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+						<a href="{{ URL::route('home') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
 			        </li>
 			        <li>
-			        	<a href="#" class="active">Home <span class="sr-only">(current)</span></a>
+			        	<a href="{{ URL::route('home') }}" class="active">Home <span class="sr-only">(current)</span></a>
 			        </li>
 			        <li><a href="#">Portfolio</a></li>
 			     	<li><a href="#">Resume</a></li>

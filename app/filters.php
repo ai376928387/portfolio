@@ -13,8 +13,13 @@
 
 App::before(function($request)
 {
-	//
-});
+	 //Lang::setLocale(Session::get('locale'));
+      if (Session::has('locale')) {
+        Lang::setLocale(Session::get('locale'));
+    } else {
+        Session::put('locale', Config::get('app.locale'));
+    }
+ });
 
 
 App::after(function($request, $response)
