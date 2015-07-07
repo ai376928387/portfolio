@@ -10,8 +10,8 @@
 			        	<a href="{{ URL::route('home') }}" class="active">Home <span class="sr-only">(current)</span></a>
 			        </li>
 			        <li><a href="#">Portfolio</a></li>
-			     	<li><a href="#">Resume</a></li>
-			     	<li><a href="#">Skills</a></li>
+			     	<li><a href="{{ URL::route('resume') }}">Resume</a></li>
+			     	<li><a href="{{ URL::route('skills') }}">Skills</a></li>
 			     	<li><a href="#">About& Contact</a></li>
 			    </ul>
 			</nav>	
@@ -60,7 +60,7 @@
 
 <div class="clearfix"></div>
 
-<div class="container">
+<div class="container logo">
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 head-col">
 		<div class="navbar-header">
 			<a href="{{ URL::route('home') }}">

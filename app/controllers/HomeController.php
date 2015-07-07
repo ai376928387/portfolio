@@ -17,4 +17,12 @@ class HomeController extends BaseController {
 
 	public function home() {return View::make('home');	}
 	
+	public function resume() {
+
+		$contents = File::get('downloadfile/CV.pdf');
+
+		return Response::make($contents, 200, array('content-type'=>'application/pdf'));
+
+	}
+	public function skills() {return View::make('skills');	}
 }

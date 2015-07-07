@@ -7,6 +7,14 @@ body{
 .header{
   background:#042C36;
   height: 50px;
+  position: fixed;
+  top: 0;
+  width:100%;
+  z-index: 999;
+}
+
+.logo{
+  margin-top:28px;
 }
 .navbar-header{
 /*    margin-top:28px;*/
@@ -118,7 +126,7 @@ body{
   box-shadow: 1px 1px 2px 0 #d0d0d0;
   border-radius: 5px;
 }
-.sidebar h2{
+.widget h2{
   padding: 10px;
   color: #417D87;
   font-family: ;
@@ -129,6 +137,21 @@ body{
   text-transform: uppercase;
   margin-top: 0;
   border-bottom: 1px solid #e8dfd6;
+}
+.widget h3{
+  text-align: center;
+}
+.widget h5{
+  text-align: right;
+}
+.widget .language h5{
+  color:#2D9B88;
+}
+.widget .design h5{
+  color:#3799B4;
+}
+.widget .tools h5{
+  color:#CEA33F;
 }
 .sidebar h3{
   color: #417D87;
@@ -153,7 +176,7 @@ body{
   text-decoration: none;
 }
 .profile {
-  background: #d0d0d0;
+  background: #e8dfd6;
   border: 1px solid #b9b9b9;
   border-radius: 130px;
   float: left;
@@ -223,4 +246,53 @@ body{
 }
 .dashboard button a{
   color:#fff;
+}
+
+/*progress bar*/
+.goalProgress {
+  background: #f7f7f7;
+}
+div.progressBar {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  letter-spacing: -1px;
+  font-weight: 700;
+  padding: 0 10px;
+  display: block;
+  overflow: hidden;
+  width: 20px;
+  margin: 10px 0;
+}
+.language .progressBar{
+  background: #36B29A;
+}
+.design .progressBar{
+  background: #40B2CB;
+}
+.tools .progressBar{
+  background: #ECC33F;
+}
+span.goalAmount {
+  display: none;
+  text-indent: -9999px;
+}
+/*end progress bar*/
+
+
+/*footer*/
+#footer {
+  clear: both;
+  overflow: hidden;
+  bottom:0;
+}
+p.footer-link {
+  background: url(../images/footer-bg.png) repeat-x rgba(255,255,255,0.6);
+  clear: both;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  overflow: hidden;
+  color: #111;
+  line-height: 18px;
 }

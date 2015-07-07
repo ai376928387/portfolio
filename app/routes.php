@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Response;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,8 +12,8 @@
 */
 //general page
 Route::get('/', array('as' =>'home','uses' =>'homecontroller@home'));
-
-
+Route::get('/resume', array('as' =>'resume','uses' =>'homecontroller@resume'));
+Route::get('/skills', array('as' =>'skills','uses' =>'homecontroller@skills'));
 //admin page
 
 /*unauthenticated group*/

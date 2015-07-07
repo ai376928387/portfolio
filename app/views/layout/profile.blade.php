@@ -31,6 +31,18 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="widget" id="labels">
+			<h2 class="title">
+				Labels
+			</h2>
+			<div class="widget-content" style="height:500px;">
+		
+
+			</div>
+		</div>
 	</div>
+
+
 	<div class="clearfix"></div>
 </div>
