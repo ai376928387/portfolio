@@ -14,6 +14,10 @@ use Illuminate\Http\Response;
 Route::get('/', array('as' =>'home','uses' =>'homecontroller@home'));
 Route::get('/resume', array('as' =>'resume','uses' =>'homecontroller@resume'));
 Route::get('/skills', array('as' =>'skills','uses' =>'homecontroller@skills'));
+Route::get('/contact', array('as' =>'contact','uses' =>'homecontroller@getContact'));
+Route::group(array('before' => 'csrf'), function() {
+	Route::post('/contact', array('as' =>'contact-post','uses' =>'homecontroller@postContact'));
+	});
 //admin page
 
 /*unauthenticated group*/

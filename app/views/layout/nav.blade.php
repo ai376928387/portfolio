@@ -12,7 +12,7 @@
 			        <li><a href="#">Portfolio</a></li>
 			     	<li><a href="{{ URL::route('resume') }}">Resume</a></li>
 			     	<li><a href="{{ URL::route('skills') }}">Skills</a></li>
-			     	<li><a href="#">About& Contact</a></li>
+			     	<li><a href="{{ URL::route('contact') }}">About& Contact</a></li>
 			    </ul>
 			</nav>	
 

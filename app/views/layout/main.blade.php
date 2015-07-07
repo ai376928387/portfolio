@@ -34,9 +34,9 @@
 
 		@include('layout.nav')
 		
-		<div class="container">
+		
 			@yield('content')
-		</div>
+		
 		
 
 		@include('layout.foot')

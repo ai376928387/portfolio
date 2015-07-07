@@ -25,4 +25,24 @@ class HomeController extends BaseController {
 
 	}
 	public function skills() {return View::make('skills');	}
+
+	public function getContact(){
+		return View::make('contact');
+	}
+	public function postContact(){
+		$fromEmail = Input::get('email');
+	    $fromName = Input::get('name');
+	    $data = Input::get('message');
+
+	    $toEmail = 'beini.gao@gmail.com';
+	    $toName = 'Wicky Gao';
+
+	    Mail::send('emails.contact', $data, function($message) use ($toEmail, $toName, $fromEmail, $fromName)
+	    {
+	        $message->to($toEmail, $toName);
+
+	        $message->from($fromEmail, $fromName);
+
+	    });
+	}
 }

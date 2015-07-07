@@ -248,6 +248,13 @@ body{
   color:#fff;
 }
 
+
+/*contact page*/
+.contact-image img{
+  margin: 0 auto;
+  border-top:2px solid #002233;
+  border-bottom: 2px solid #002233;
+}
 /*progress bar*/
 .goalProgress {
   background: #f7f7f7;

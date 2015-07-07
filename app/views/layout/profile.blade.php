@@ -26,7 +26,7 @@
 						<p></p>
 						<p>HTML/CSS, PHP, JAVASCRIPT, PHOTOSHOP, FLASH, FILM CUT PRO</p>
 						<p>Currently live in Auckland </p>
-						<button type="button" class="btn btn-primary btn-sm more-info"><a href="#">More</a></button>
+						<button type="button" class="btn btn-primary btn-sm more-info"><a href="{{ URL::route('contact') }}">More</a></button>
 					</div>
 				</div>
 			</div>
