@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	{{ HTML::script('js/jquery-1.11.2.min.js') }}
-	{{ HTML::script('js/bootstrap.min.js') }}			
+	{{ HTML::script('js/bootstrap.min.js') }}	
+	{{ HTML::script('js/jquery.fullPage.js')}}		
 	{{ HTML::script('js/script.js') }}
 	{{ HTML::style('css/bootstrap.min.css') }}
 	{{ HTML::style('css/bootstrap-social.css') }}
+	{{ HTML::style('css/jquery.fullPage.css') }}
 	{{ HTML::style('css/style.css') }}
-	<title>Gao Beini 柳条高 Profolio</title>
+	<title>Gao Beini 柳条高 Portfolio</title>
 </head>
 <body>
 	<!-- Create a div which will be the canvasloader wrapper -->	
@@ -28,14 +30,17 @@
   		loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
     </script>
 
-		@if (Session::has('global'))
-		<p class="global">{{ Session::get('global') }}</p>
-		@endif
 
 		@include('layout.nav')
+
+
+		@if (Session::has('global'))
+		<div class="container">
+			<p class="global">{{ Session::get('global') }}</p>
+		</div>
+		@endif
 		
-		
-			@yield('content')
+		@yield('content')
 		
 		
 

@@ -9,7 +9,7 @@
 			        <li>
 			        	<a href="{{ URL::route('home') }}" class="active">Home <span class="sr-only">(current)</span></a>
 			        </li>
-			        <li><a href="#">Portfolio</a></li>
+			        <li><a href="{{ URL::route('portfolio') }}">Portfolio</a></li>
 			     	<li><a href="{{ URL::route('resume') }}">Resume</a></li>
 			     	<li><a href="{{ URL::route('skills') }}">Skills</a></li>
 			     	<li><a href="{{ URL::route('contact') }}">About& Contact</a></li>

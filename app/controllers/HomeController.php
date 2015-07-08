@@ -15,7 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function home() {return View::make('home');	}
+	public function home() {
+		$latestrecord=DB::table('slider_images')->orderBy('created_at', 'desc')->get()[0];
+		return View::make('home')->with('latestrecord',$latestrecord);	
+	}
 	
 	public function resume() {
 
@@ -30,19 +33,24 @@ class HomeController extends BaseController {
 		return View::make('contact');
 	}
 	public function postContact(){
-		$fromEmail = Input::get('email');
-	    $fromName = Input::get('name');
-	    $data = Input::get('message');
 
-	    $toEmail = 'beini.gao@gmail.com';
-	    $toName = 'Wicky Gao';
+		$fromEmail=Input::get('email');
 
-	    Mail::send('emails.contact', $data, function($message) use ($toEmail, $toName, $fromEmail, $fromName)
+	    Mail::send('emails.contact', 
+	    	array('fromEmail'=>Input::get('email'),'fromName'=>Input::get('name'), 'data'=>Input::get('message')), 
+	    	function($message)
 	    {
-	        $message->to($toEmail, $toName);
+	        $message->to('beini.gao@gmail.com');
 
-	        $message->from($fromEmail, $fromName);
+	        $message->from('beini.gao@gmail.com');
 
 	    });
+
+	    return Redirect::route('contact')
+						->with('global','your contact email has been sent');
+	}
+
+	public function getportfolio(){
+		return View::make('portfolio');
 	}
 }

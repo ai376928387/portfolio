@@ -18,6 +18,7 @@ Route::get('/contact', array('as' =>'contact','uses' =>'homecontroller@getContac
 Route::group(array('before' => 'csrf'), function() {
 	Route::post('/contact', array('as' =>'contact-post','uses' =>'homecontroller@postContact'));
 	});
+Route::get('/portfolio',array('as'=>'portfolio','uses'=>'homecontroller@getportfolio'));
 //admin page
 
 /*unauthenticated group*/

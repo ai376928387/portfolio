@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-			<div class="widget" id="profile">
+			<div class="widget" id="skill-left">
 				<h2 class="title">Skills</h2>
 				<div class="widget-content language">
 					<h3>Languages and Frameworks</h3>

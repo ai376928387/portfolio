@@ -1,26 +1,31 @@
-<div class="widget" id="homeslider">
+<div id="homeslider">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
-	  <ol class="carousel-indicators">
+	  <!-- <ol class="carousel-indicators">
 	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-	  </ol>
+	  </ol> -->
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
-	    <div class="item active">
-	      <img src="..." alt="...">
+		
+		<div class="item active">
+	      <img src="uploadfiles/{{  $latestrecord->image_name }}" alt="{{  $latestrecord->title }}">
 	      <div class="carousel-caption">
-	        HERE IS DESCRIPTION
+	        {{  $latestrecord->title }}  {{  $latestrecord->description }}
 	      </div>
 	    </div>
+
+	  	@foreach(SliderImage::all() as $sliderimage)
+
 	    <div class="item">
-	      <img src="..." alt="...">
+	      <img src="uploadfiles/{{ $sliderimage->image_name }}" alt="{{ $sliderimage->title }}">
 	      <div class="carousel-caption">
-	        HERE IS DESCRIPTION
+	        {{ $sliderimage->title }}  {{ $sliderimage->description }}
 	      </div>
 	    </div>
+	    @endforeach
 	  </div>
 
 	  <!-- Controls -->
