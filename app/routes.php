@@ -19,6 +19,12 @@ Route::group(array('before' => 'csrf'), function() {
 	Route::post('/contact', array('as' =>'contact-post','uses' =>'homecontroller@postContact'));
 	});
 Route::get('/portfolio',array('as'=>'portfolio','uses'=>'homecontroller@getportfolio'));
+Route::get('/portfolio/website/healthplus',array('as'=>'healthplus','uses'=>"homecontroller@getHealthplus"));
+Route::get('/portfolio/website/pawnstar',array('as'=>'pawnstar','uses'=>"homecontroller@getPawnstar"));
+Route::get('/portfolio/website/sellmyapple',array('as'=>'sellmyapple','uses'=>"homecontroller@getSellmyapple"));
+Route::get('/portfolio/design/magazine',array('as'=>'magazine','uses'=>"homecontroller@getMagazine"));
+Route::get('/portfolio/film/flash',array('as'=>'flash','uses'=>"homecontroller@getFlash"));
+Route::get('/portfolio/film/ratherbe',array('as'=>'movie','uses'=>"homecontroller@getRatherbe"));
 //admin page
 
 /*unauthenticated group*/
@@ -42,8 +48,10 @@ Route::group(array('before'=>'auth'),function(){
 	Route::get('/account/signout',array('as' => 'account-sign-out','uses' => 'AdminController@getSignOut')); 
 	//add slider image
 	Route::get ('/admin/add-slider-images',array('as'=>'add-slider-images','uses'=>'AdminController@getAddImg'));
+	Route::get ('/admin/add-blog',array('as'=>'add-blog','uses'=>'AdminController@getAddBlog'));
 	/*CSRF PROTECTION GROUP*/
 	Route::group(array('before' => 'csrf'), function() {
 		Route::post ('/admin/add-slider-images',array('as'=>'add-slider-images-post','uses'=>'AdminController@postAddImg'));
+		Route::post ('/admin/add-blog',array('as'=>'add-blog-post','uses'=>'AdminController@postAddBlog'));
 		});
 });

@@ -36,9 +36,17 @@
 			<h2 class="title">
 				Labels
 			</h2>
-			<div class="widget-content" style="height:500px;">
-		
+			<div class="widget-content" style="min-height:300px;">
+				<ul>
+					<li><a href="{{ URL::route('portfolio') }}">Website</a></li>
+					<li><a href="{{ URL::route('contact') }}">About Me</a></li>
+					<li><a href="{{ URL::route('contact') }}">Contact Me</a></li>
+					<li><a href="{{ URL::route('portfolio') }}">Design</a></li>
+					<li><a href="{{ URL::route('portfolio') }}">Flash</a></li>
+					<li><a href="{{ URL::route('portfolio') }}">Filming</a></li>
+					<li><a href="#blog">Blog</a></li>
 
+				</ul>
 			</div>
 		</div>
 	</div>

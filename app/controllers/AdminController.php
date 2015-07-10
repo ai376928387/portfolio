@@ -103,4 +103,15 @@ class AdminController extends BaseController {
 						->with('global','Image uploaded successfully');
 		}
 	}
+	public function getAddBlog(){
+		return View::make('admin.addBlog');
+	}
+	public function postAddBlog(){
+		$posts =Post::create(array(
+		'title' => Input::get('title'),
+		'content' => Input::get('content'),
+		));
+		return Redirect::route('add-blog')
+					->with('global','post uploaded successfully');
+	}
 }

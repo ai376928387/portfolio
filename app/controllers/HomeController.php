@@ -17,7 +17,8 @@ class HomeController extends BaseController {
 
 	public function home() {
 		$latestrecord=DB::table('slider_images')->orderBy('created_at', 'desc')->get()[0];
-		return View::make('home')->with('latestrecord',$latestrecord);	
+		$posts=DB::table('posts')->orderBy('created_at','desc')->get();
+		return View::make('home')->with('latestrecord',$latestrecord)->with('posts',$posts);	
 	}
 	
 	public function resume() {
@@ -52,5 +53,23 @@ class HomeController extends BaseController {
 
 	public function getportfolio(){
 		return View::make('portfolio');
+	}
+	public function getHealthplus(){
+		return View::make('portfolio.healthplus');
+	}
+	public function getPawnstar(){
+		return View::make('portfolio.pawnstarnz');
+	}
+	public function getSellmyapple(){
+		return View::make('portfolio.sellmyapple');
+	}
+	public function getMagazine(){
+		return View::make('portfolio.magazine');
+	}
+	public function getFlash(){
+		return View::make('portfolio.flash');
+	}
+	public function getRatherbe(){
+		return View::make('portfolio.ratherbe');
 	}
 }

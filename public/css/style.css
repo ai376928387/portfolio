@@ -224,6 +224,9 @@ body{
 .profile:hover header .details{
   top:90px;
 }
+
+
+
 .sidebar .profile-img img{
   border-radius: 120px;
   position: absolute;
@@ -240,8 +243,18 @@ body{
 .widget-content .profile-img{
   text-align: center;
 }
+.widget-content .label{
+  font-size:14px;
+  line-height: 20px;
+  margin:5px;
+  display: block;
+  float:left;
+}
 
 /*admin page*/
+.dashboard{
+  min-height: 500px;
+}
 .dashboard h3{
   color:#fff;
 }
@@ -251,8 +264,19 @@ body{
 .dashboard button a{
   color:#fff;
 }
+/*portfolio page*/
+#portfolio .section{
+  padding:20px 0;
+  border-bottom:2px solid #002233;
+}
+#portfolio .section h3{
+  text-align: center;
+}
 
 
+
+
+/*end portfolio page*/
 /*contact page*/
 .contact-image img{
   margin: 0 auto;
@@ -316,10 +340,38 @@ span.goalAmount {
   padding-top:20px;
   padding-right: 15px;
 }
-
-.contact-form label{
-  color:#042C36;
+.sidebar #labels{
+  padding: 7px;
+  margin: 0;
+  font-size: 12px;
+  color: gray;
 }
+.sidebar #labels ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar #labels ul li{
+  padding: 3px!important;
+  margin: 0!important;
+  border: 0!important;
+  width: 100%;
+  height: 30px;
+}
+.sidebar #labels ul li a{
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #666!important;
+  border: 0;
+}
+.sidebar #labels ul li a:hover{
+  color:#417D87;
+}
+
 .contact-form textarea{
   height:200px;
 }
@@ -371,7 +423,27 @@ span.goalAmount {
   text-indent: -9999em;
   overflow: hidden;
 }
-
+.portfolioListItem .thumbnail {
+  background:none ;
+  border:none;
+}
+.portfolioListItem a:hover {
+  background: url(../images/thumbnail-hover.png) center center;
+  text-indent: 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.portfolio-main{
+  min-height: 500px;
+}
+.portfolio-main .col-md-4{
+  padding-top:20px;
+}
+.portfolio-main p{
+  font-size: 14px;
+  font-weight: 400;
+}
 /*homeslider*/
 #homeslider .item{
   max-height:350px;
@@ -387,8 +459,23 @@ span.goalAmount {
   margin-top:10px;
 }
 
-
-
+/*blog*/
+#blog h2{
+  font-size: 20px;
+}
+#blog p{
+  font-size:16px;
+}
+#blog .created_by{
+  padding:7px;
+}
+#blog .widget-content{
+  border-bottom: 1px solid #e8dfd6;
+}
+#blog .widget-footer{
+  padding:4px 7px;
+  float:right;
+}
 /*end blog*/
 
 /*footer*/
@@ -398,11 +485,12 @@ span.goalAmount {
   bottom:0;
 }
 p.footer-link {
-  background: url(../images/footer-bg.png) repeat-x rgba(255,255,255,0.6);
+  background: url(../images/footer-bg.png) repeat-x rgba(255,255,255,0.4);
   clear: both;
   text-align: center;
   font-size: 12px;
   padding: 20px;
+  margin:20px 0 0 0px;
   overflow: hidden;
   color: #111;
   line-height: 18px;

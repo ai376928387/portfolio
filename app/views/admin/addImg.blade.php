@@ -24,7 +24,6 @@
 		</div>
 		<button type="submit" class="btn btn-default">Upload Images</button>
 		{{ Form::close() }}
-	</form>
 	</div>
 	<div class="col-md-2"></div>
 </div>

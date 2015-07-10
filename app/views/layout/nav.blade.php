@@ -13,6 +13,10 @@
 			     	<li><a href="{{ URL::route('resume') }}">Resume</a></li>
 			     	<li><a href="{{ URL::route('skills') }}">Skills</a></li>
 			     	<li><a href="{{ URL::route('contact') }}">About& Contact</a></li>
+			     	@if (Auth::check())
+					<li><a href="{{ URL::route('admin-home') }}">Admin</a></li>
+					<li><a href="{{ URL::route('account-sign-out') }}">Sign out</a></li>
+					@endif
 			    </ul>
 			</nav>	
 
@@ -45,14 +49,14 @@
 			</div>
 
 
-			<form action="/search" class="navbar-form navbar-right search-bar" method="get" role="search">
+			<!-- <form action="/search" class="navbar-form navbar-right search-bar" method="get" role="search">
 				<div class="form-group">
 					<input class="form-control form-main-search" name="q" placeholder="Search" type="text">
 				</div>
 				<button class="btn btn-def" type="submit">
 				              Submit
 	            </button>
-			</form>
+			</form> -->
 
 		</div>
 	</div>
