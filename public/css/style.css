@@ -242,6 +242,9 @@ body{
 }
 
 /*admin page*/
+.dashboard{
+  min-height: 500px;
+}
 .dashboard h3{
   color:#fff;
 }

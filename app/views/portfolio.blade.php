@@ -12,12 +12,13 @@
 		<div class="widget-content">
 			<header class="sort_by">
 				<span>Show:</span>
-					<a href="*">All</a>
+
 					<a href="*">Website</a>
 					<a href="*">Graphic/Web design</a>
 					<a href="*">Flash/Video</a>
+					<a href="*">Photography</a>
 			</header>
-			<div class="fullpage">
+
 				<div class="section active">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
@@ -59,8 +60,12 @@
 						</div>
 					</div>
 				</div>
+				<div class="section">Graphic/Web design</div>
+				<div class="section">Flash/Video</div>
+				<div class="section">Photography</div>
 			</div>
-
+			
+			
 		</div>
 	</div>
 </div>

@@ -4,11 +4,9 @@
 	<meta charset="UTF-8">
 	{{ HTML::script('js/jquery-1.11.2.min.js') }}
 	{{ HTML::script('js/bootstrap.min.js') }}	
-	{{ HTML::script('js/jquery.fullPage.js')}}		
 	{{ HTML::script('js/script.js') }}
 	{{ HTML::style('css/bootstrap.min.css') }}
 	{{ HTML::style('css/bootstrap-social.css') }}
-	{{ HTML::style('css/jquery.fullPage.css') }}
 	{{ HTML::style('css/style.css') }}
 	<title>Gao Beini 柳条高 Portfolio</title>
 </head>
