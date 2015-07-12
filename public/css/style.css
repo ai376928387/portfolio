@@ -6,44 +6,44 @@ body{
 
 .header{
   background:#042C36;
-  height: 50px;
-  position: fixed;
   top: 0;
   width:100%;
   z-index: 999;
 }
 
-.logo{
-  margin-top:28px;
-}
-.navbar-header{
-/*    margin-top:28px;*/
-}
 .menu{
 /*    margin-top: 20px;*/
 }
-.header ul{
-    
+.logo{
+  margin: 20px;
 }
-.header ul li{
-    color:#042c36; 
+.navbar-default{
+  background: #042C36;
+  border:none;
 }
-.header ul a{
+.navbar-default ul li {
+  color:#042c36; 
+}
+.navbar-default .navbar-nav>li>a {
   color:#fff;
+  font-size:400;
 }
-.header .navbar-nav>li>a:hover{
+ .navbar-default .navbar-nav>li>a:hover{
   background-color:#04232b;
 }
-.head-col{
-    padding: 20px 20px;
+.container-fluid{
+  padding:none;
+  margin:none;
 }
-
+.navbar-form{
+  padding:0;
+}
 /* social media button*/
 .social{
-  float:right;
+  float:left;
 }
 .social ul {
-  float:right;
+  float:left:;
   list-style: none;
   color: #000;
 }
@@ -66,7 +66,9 @@ body{
   padding: 12px 0 0 0;
   color:#fff;
 }
-
+.search-bar-box{
+  float: left;
+}
 /* Pseudo Elements */
 .social ul li a:after {
   content: "";
@@ -94,8 +96,10 @@ body{
 
 /*search bar*/
 .search-bar{
-  border-color: #e7e7e7;
-  margin-right: 20px;
+  margin-right: 5px;
+}
+.navbar-form {
+  border:none;
 }
 .btn-def{
   width: 16px;
@@ -264,6 +268,17 @@ body{
 .dashboard button a{
   color:#fff;
 }
+.dashboard table{
+  width: 100%;
+}
+.dashboard table th{
+  text-align: center;
+}
+.dashboard table th,td{
+  border:1px solid black;
+  padding:4px 20px;
+}
+
 /*portfolio page*/
 #portfolio .section{
   padding:20px 0;
@@ -494,4 +509,19 @@ p.footer-link {
   overflow: hidden;
   color: #111;
   line-height: 18px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width:768px) { 
+  .header{
+    height: 120px;
+  }
+
+}
+@media(max-width:1170px){
+}
+/* large devices (desktops, 992px and up) */
+@media (min-width:1170px) { 
+  .header{
+    height: 50px;
+  }
 }

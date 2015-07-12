@@ -10,7 +10,7 @@
 		    <div style="background-color:#005f74;">
 		      <h3 style="text-align:center;">Slider Image</h3>
 		      <ul class="list-group">
-		        <a href="*" class="list-group-item">View all images</a>
+		        <a href="{{ URL::route('view-images') }}" class="list-group-item">View all images</a>
 		        <a href="{{ URL::route('add-slider-images') }}"  class="list-group-item">Add images</a>
 		      </ul>
 		    </div>

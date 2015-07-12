@@ -48,6 +48,7 @@ Route::group(array('before'=>'auth'),function(){
 	Route::get('/account/signout',array('as' => 'account-sign-out','uses' => 'AdminController@getSignOut')); 
 	//add slider image
 	Route::get ('/admin/add-slider-images',array('as'=>'add-slider-images','uses'=>'AdminController@getAddImg'));
+	Route::get ('/admin/view-images',array('as'=>'view-images','uses'=>'AdminController@viewImg'));
 	Route::get ('/admin/add-blog',array('as'=>'add-blog','uses'=>'AdminController@getAddBlog'));
 	/*CSRF PROTECTION GROUP*/
 	Route::group(array('before' => 'csrf'), function() {

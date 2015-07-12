@@ -39,5 +39,5 @@ class Post extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->password;
 	}
    
-
+	
 }

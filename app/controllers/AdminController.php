@@ -86,6 +86,8 @@ class AdminController extends BaseController {
 	public function getDashboard(){
 		return View::make('admin.dashboard');
 	}
+
+	// deal with images
 	public function getAddImg(){
 		return View::make('admin.addImg');
 	}
@@ -102,6 +104,9 @@ class AdminController extends BaseController {
 			return Redirect::route('add-slider-images')
 						->with('global','Image uploaded successfully');
 		}
+	}
+	public function viewImg(){
+		return View::make('admin.viewImg');
 	}
 	public function getAddBlog(){
 		return View::make('admin.addBlog');
