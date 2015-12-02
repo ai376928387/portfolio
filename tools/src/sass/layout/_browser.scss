@@ -1,0 +1,71 @@
+//firefox
+@media (-moz-device-pixel-ratio) {
+    .application-form {
+        .form-products-to-be-licenced {
+            .fieldset-wrapper {
+                .products_to_be_licensed_detail {
+                    .fieldset-wrapper {
+                        .export-markets-current .input-wrapper {
+                            top: 6px;
+                        }
+                        .product-design-in-nz {
+                            .design-in-nz-1-percentage {
+                                top: 272px;
+                            }
+                            .design-in-nz-2-percentage {
+                                top: 474px;
+                            }
+                            .design-in-nz-two-note {
+                                top: 442px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//safari
+_::-webkit-full-page-media, _:future, :root {
+    .application-form {
+        .form-nz-ownership {
+            .ownership-percentage {
+                .field-suffix {
+                    position: absolute;
+                    left: 42%;
+                }
+            }
+        }
+        .form-products-to-be-licenced {
+            .fieldset-wrapper {
+                .products_to_be_licensed_detail {
+                    .fieldset-wrapper {
+                        .export-markets-current .input-wrapper {
+                            top: 6px;
+                        }
+                        .product-design-in-nz {
+                            .design-in-nz-1-percentage {
+                                top: 292px;
+                            }
+                            .design-in-nz-2-percentage {
+                                top: 494px;
+                            }
+                            .design-in-nz-two-note {
+                                top: 462px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .select-input-wrapper {
+            .webform-component-textarea {
+                position: absolute;
+                width: 62%;
+            }
+        }
+        .form-legal-compliance, .form-pending-investigations, .form-reputational-risks, .form-other-supporting-information {
+            clear: both;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <div class="header">	
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-9">
 			<nav class="navbar navbar-default">
 	  			<div class="container-fluid">
 					<div class="navbar-header">
@@ -33,8 +33,8 @@
 				</div>
 			</nav>
 		</div>
-		<div class="col-md-4">
-			<div class="search-bar-box">
+		<div class="col-md-3">
+			<!-- <div class="search-bar-box">
 				<form action="/search" class="navbar-form search-bar" method="get" role="search">
 					<div class="form-group">
 						<input class="form-control form-main-search" name="q" placeholder="Search" type="text">
@@ -43,7 +43,7 @@
 					              Submit
 		            </button>
 				</form>
-			</div>
+			</div> -->
 			<div class="social">
 				<ul class="nav nav-pills navbar-right">
 					<li class="facebook">
