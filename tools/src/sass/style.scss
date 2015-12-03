@@ -22,6 +22,7 @@ Helpers
 **/
 
 @import "helpers/mixins";
+@import "helpers/mytheme_mixins";
 @import "compass/css3";
 @import "helpers/animation";
 
@@ -76,6 +77,10 @@ Layout
 
 @import "layout/browser";
 @import "layout/module-ie";
+@import "layout/section";
+@import "layout/typography";
+@import "layout/color";
+@import "layout/spacing";
 
 /**
 Components
@@ -88,7 +93,8 @@ Components
 **/
 
 @import "components/form";
-
+@import "components/social_btn";
+@import "components/fade";
 /**
 Pages
 

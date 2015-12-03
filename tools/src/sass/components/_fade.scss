@@ -1,0 +1,18 @@
+.fade-half {
+  opacity: 0.5;
+}
+.fade-1-4 {
+  opacity: 0.75;
+}
+.fade-3-4 {
+  opacity: 0.25;
+}
+.fade-on-hover {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  opacity: .5;
+}
+.fade-on-hover:hover {
+  opacity: 1;
+}

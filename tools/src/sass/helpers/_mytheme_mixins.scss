@@ -1,0 +1,21 @@
+@mixin v-align-children {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+@media all and (max-width:990px) {
+	@mixin v-align-children {
+		display: block !important;
+	}
+}
+
+.v-align-children {
+ @include  v-align-children
+}
