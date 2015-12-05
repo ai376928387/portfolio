@@ -11816,51 +11816,24 @@ References:
 			clientID: null
 		}
 	}(jQuery, window, document);
-// Append .background-image-holder <img>'s as CSS backgrounds
-$(document).ready(function() { 
-    $('.background-image-holder').each(function() {
-        var imgSrc = $(this).children('img').attr('src');
-        $(this).css('background', 'url("' + imgSrc + '")');
-        $(this).children('img').hide();
-        $(this).css('background-position', 'initial');
-    });
-
-    // Fade in background images
-
-    setTimeout(function() {
-        $('.background-image-holder').each(function() {
-            $(this).addClass('fadeIn');
-        });
-    }, 200);
-}); 
-$(document).ready(function() { 
-    // Instagram Feed    
-    if($('.instafeed').length){
-        jQuery.fn.spectragram.accessData = {
-            accessToken: '1027763135.1677ed0.d2f03dd326b641b3b5d8e71d5405f4d6',
-            clientID: 'e3f44710d80e4d4c896ffc6269a1d227'
-        };  
-
-        $('.instafeed').each(function() {
-            var feedID = $(this).attr('data-user-name') + '_';
-            $(this).children('ul').spectragram('getUserFeed', {
-                query: feedID,
-                max: 12
-            });
-        })
-    }
-}); 
 var mr_firstSectionHeight,
     mr_nav,
     mr_navOuterHeight,
+    mr_socialbg,
     mr_navScrolled = false,
     mr_navFixed = false,
     mr_outOfSight = false,
     mr_floatingProjectSections,
     mr_scrollTop = 0;
+    mr_socialbgFixed = false;
     
 $(document).ready(function() {
-    
+
+    // Update scroll variable for scrolling functions
+
+    addEventListener('scroll', function() {
+        mr_scrollTop = window.pageYOffset;
+    }, false);
 
     // Navigation
 
@@ -11898,6 +11871,7 @@ $(document).ready(function() {
     // Fix nav to top while scrolling
 
     mr_nav = $('body .nav-container nav:first');
+    mr_socialbg = $('body .nav-container .social a');
     mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
     window.addEventListener("scroll", updateNav, false);
 
@@ -11974,6 +11948,10 @@ $(document).ready(function() {
                 mr_navScrolled = false;
                 mr_nav.removeClass('scrolled');
             }
+            if (mr_socialbgFixed) {
+                mr_socialbgFixed = false;
+                mr_socialbg.removeClass('fixed');
+            }
             return;
         }
 
@@ -11988,6 +11966,8 @@ $(document).ready(function() {
                 if (!mr_navFixed) {
                     mr_nav.addClass('fixed');
                     mr_navFixed = true;
+                    mr_socialbg.addClass('fixed');
+                    mr_socialbgFixed = true;
                 }
 
                 if (scrollY > mr_navOuterHeight * 2) {
@@ -12020,6 +12000,40 @@ $(document).ready(function() {
         }
     }
 });
+// Append .background-image-holder <img>'s as CSS backgrounds
+$(document).ready(function() { 
+    $('.background-image-holder').each(function() {
+        var imgSrc = $(this).children('img').attr('src');
+        $(this).css('background', 'url("' + imgSrc + '")');
+        $(this).children('img').hide();
+        $(this).css('background-position', 'initial');
+    });
+
+    // Fade in background images
+
+    setTimeout(function() {
+        $('.background-image-holder').each(function() {
+            $(this).addClass('fadeIn');
+        });
+    }, 200);
+}); 
+$(document).ready(function() { 
+    // Instagram Feed    
+    if($('.instafeed').length){
+        jQuery.fn.spectragram.accessData = {
+            accessToken: '1027763135.1677ed0.d2f03dd326b641b3b5d8e71d5405f4d6',
+            clientID: 'e3f44710d80e4d4c896ffc6269a1d227'
+        };  
+
+        $('.instafeed').each(function() {
+            var feedID = $(this).attr('data-user-name') + '_';
+            $(this).children('ul').spectragram('getUserFeed', {
+                query: feedID,
+                max: 12
+            });
+        })
+    }
+}); 
 jQuery(document).ready(function($) {
 	$( "#printcv" ).click(function() {
 	  	alert('still need to be done');

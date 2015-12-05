@@ -20580,7 +20580,7 @@ nav.nav-centered .module.widget-handle {
 @media all and (max-width: 1100px) {
   /* line 231, ../../tools/src/sass/layout/_header.scss */
   .module.widget-handle {
-    padding: 0 16px;
+    padding: 0;
   }
 }
 /* line 238, ../../tools/src/sass/layout/_header.scss */
@@ -21100,76 +21100,42 @@ nav.transparent .menu > li > a, nav.transparent .module.widget-handle i {
   opacity: 1;
 }
 /* line 688, ../../tools/src/sass/layout/_header.scss */
-nav.transparent .has-dropdown:after {
-  color: #fff;
-}
-/* line 691, ../../tools/src/sass/layout/_header.scss */
 nav.transparent.fixed {
   background: #042C36;
 }
-/* line 693, ../../tools/src/sass/layout/_header.scss */
+/* line 690, ../../tools/src/sass/layout/_header.scss */
 nav.transparent.fixed .menu > li > a, nav.transparent.fixed .module.widget-handle i {
-  color: #292929;
-}
-/* line 696, ../../tools/src/sass/layout/_header.scss */
-nav.transparent.fixed .menu > .has-dropdown:after {
   color: #fff;
-  color: #292929;
 }
-/* line 700, ../../tools/src/sass/layout/_header.scss */
+/* line 693, ../../tools/src/sass/layout/_header.scss */
 nav.transparent.fixed .module.widget-handle {
   border-left: 1px solid #ccc;
 }
-/* line 703, ../../tools/src/sass/layout/_header.scss */
+/* line 696, ../../tools/src/sass/layout/_header.scss */
 nav.transparent.fixed .menu > li > a, nav.transparent.fixed .module.widget-handle i {
-  opacity: .5;
-}
-/* line 709, ../../tools/src/sass/layout/_header.scss */
-nav.bg-dark .menu > li > a, nav.bg-dark .module.widget-handle i, nav.bg-dark .nav-utility {
-  color: #fff;
-  opacity: .7;
-}
-/* line 713, ../../tools/src/sass/layout/_header.scss */
-nav.bg-dark .module.widget-handle {
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-}
-/* line 716, ../../tools/src/sass/layout/_header.scss */
-nav.bg-dark .nav-utility, nav.bg-dark .nav-bar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-/* line 720, ../../tools/src/sass/layout/_header.scss */
-nav.transparent.fixed.bg-dark {
-  background: #292929;
-}
-/* line 722, ../../tools/src/sass/layout/_header.scss */
-nav.transparent.fixed.bg-dark .menu > li > a, nav.transparent.fixed.bg-dark .module.widget-handle i {
-  color: #fff;
-}
-/* line 726, ../../tools/src/sass/layout/_header.scss */
-nav.nav-centered.outOfSight .logo {
-  display: none;
+  opacity: 0.9;
 }
 
 @media all and (max-width: 990px) {
-  /* line 732, ../../tools/src/sass/layout/_header.scss */
+  /* line 704, ../../tools/src/sass/layout/_header.scss */
   nav.transparent .nav-open {
     background: #fff;
   }
-  /* line 734, ../../tools/src/sass/layout/_header.scss */
+  /* line 706, ../../tools/src/sass/layout/_header.scss */
   nav.transparent .nav-open .menu > li > a, nav.transparent .nav-open .module.widget-handle i, nav.transparent .nav-open .nav-utility {
     color: #292929;
   }
-  /* line 737, ../../tools/src/sass/layout/_header.scss */
+  /* line 709, ../../tools/src/sass/layout/_header.scss */
   nav.transparent .nav-open .has-dropdown:after {
     color: #292929;
   }
 
-  /* line 741, ../../tools/src/sass/layout/_header.scss */
+  /* line 713, ../../tools/src/sass/layout/_header.scss */
   .menu > li:last-child > ul ul {
     right: 0;
   }
 }
-/* line 746, ../../tools/src/sass/layout/_header.scss */
+/* line 718, ../../tools/src/sass/layout/_header.scss */
 .nav-is-overlay nav {
   opacity: 1;
   visibility: visible;
@@ -21749,7 +21715,7 @@ h4,
 h5,
 h6 {
   font-weight: 300;
-  color: #292929;
+  color: #042C36;
 }
 
 /* line 61, ../../tools/src/sass/layout/_typography.scss */
@@ -22037,7 +22003,7 @@ a:hover {
 /*!---------- 4. COLOURS ----------*/
 /* line 2, ../../tools/src/sass/layout/_color.scss */
 .bg-primary {
-  background: #47b475 !important;
+  background: #ccc !important;
 }
 
 /* line 5, ../../tools/src/sass/layout/_color.scss */
@@ -22056,21 +22022,26 @@ a:hover {
 }
 
 /* line 14, ../../tools/src/sass/layout/_color.scss */
+.bg-custom {
+  background-color: #e8dfd6 url(../images/pattern-noise.png);
+}
+
+/* line 17, ../../tools/src/sass/layout/_color.scss */
 .color-body {
   color: #666;
 }
 
-/* line 17, ../../tools/src/sass/layout/_color.scss */
+/* line 20, ../../tools/src/sass/layout/_color.scss */
 .color-primary {
   color: #042C36 !important;
 }
 
-/* line 20, ../../tools/src/sass/layout/_color.scss */
+/* line 23, ../../tools/src/sass/layout/_color.scss */
 .color-red {
   color: #e31d3b !important;
 }
 
-/* line 23, ../../tools/src/sass/layout/_color.scss */
+/* line 26, ../../tools/src/sass/layout/_color.scss */
 .color-white {
   color: #fff;
 }
@@ -23377,43 +23348,54 @@ body.btn-rounded .btn {
 }
 
 /* social media button*/
-/* line 4, ../../tools/src/sass/components/_social_btn.scss */
+/* line 3, ../../tools/src/sass/components/_social_btn.scss */
+.social {
+  margin-right: 55px;
+}
+/* line 5, ../../tools/src/sass/components/_social_btn.scss */
 .social a {
   position: relative;
-  background-image: url("../images/flag.svg");
   width: 40px;
   height: 72px;
   text-align: center;
   color: #000;
   padding: 0 0 20px 0;
 }
-/* line 13, ../../tools/src/sass/components/_social_btn.scss */
+/* line 14, ../../tools/src/sass/components/_social_btn.scss */
+.social a.fixed {
+  background-image: url("../images/flag.svg");
+}
+/* line 18, ../../tools/src/sass/components/_social_btn.scss */
 .social a:hover {
   color: #fff;
 }
-/* line 18, ../../tools/src/sass/components/_social_btn.scss */
+/* line 22, ../../tools/src/sass/components/_social_btn.scss */
+.social .github {
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+/* line 25, ../../tools/src/sass/components/_social_btn.scss */
 .social .fa-facebook, .social .fa-twitter, .social .fa-github, .social .fa-linkedin {
   padding: 0;
   color: #fff;
 }
-/* line 23, ../../tools/src/sass/components/_social_btn.scss */
-.social .facebook a:hover {
+/* line 30, ../../tools/src/sass/components/_social_btn.scss */
+.social .facebook a.fixed:hover {
   background-image: url("../images/flag-facebook.svg");
 }
-/* line 27, ../../tools/src/sass/components/_social_btn.scss */
-.social .twitter a:hover {
+/* line 34, ../../tools/src/sass/components/_social_btn.scss */
+.social .twitter a.fixed:hover {
   background-image: url("../images/flag-twitter.svg");
 }
-/* line 31, ../../tools/src/sass/components/_social_btn.scss */
-.social .github a:hover {
+/* line 38, ../../tools/src/sass/components/_social_btn.scss */
+.social .github a.fixed:hover {
   background-image: url("../images/flag-github.svg");
 }
-/* line 35, ../../tools/src/sass/components/_social_btn.scss */
-.social .linkedin a:hover {
+/* line 42, ../../tools/src/sass/components/_social_btn.scss */
+.social .linkedin a.fixed:hover {
   background-image: url("../images/flag-linkedin.svg");
 }
 
-/* line 40, ../../tools/src/sass/components/_social_btn.scss */
+/* line 47, ../../tools/src/sass/components/_social_btn.scss */
 .search-bar-box {
   float: left;
 }
@@ -23645,45 +23627,45 @@ img {
   opacity: 1;
 }
 
-/* line 2, ../../tools/src/sass/components/_mainbanner.scss */
+/* line 3, ../../tools/src/sass/components/_mainbanner.scss */
 .mainbanner h1.large {
   font-weight: 400;
 }
-/* line 5, ../../tools/src/sass/components/_mainbanner.scss */
+/* line 7, ../../tools/src/sass/components/_mainbanner.scss */
 .mainbanner .v-align-transform {
   -moz-transform: translateY(100%);
   -ms-transform: translateY(100%);
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }
-/* line 8, ../../tools/src/sass/components/_mainbanner.scss */
+/* line 11, ../../tools/src/sass/components/_mainbanner.scss */
 .mainbanner ul.lead {
   font-size: 16px;
 }
-/* line 11, ../../tools/src/sass/components/_mainbanner.scss */
+/* line 15, ../../tools/src/sass/components/_mainbanner.scss */
 .mainbanner li {
   display: inline;
 }
-/* line 14, ../../tools/src/sass/components/_mainbanner.scss */
+/* line 19, ../../tools/src/sass/components/_mainbanner.scss */
 .mainbanner.opacity-black-position {
   background-color: #000;
 }
-/* line 17, ../../tools/src/sass/components/_mainbanner.scss */
-.mainbanner.opacity-black-position .background-image-holder {
-  transition: opacity .5s;
-  opacity: 0.5;
-}
 /* line 22, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner.opacity-black-position .background-image-holder {
+  transition: opacity .6s;
+  opacity: 0.6;
+}
+/* line 28, ../../tools/src/sass/components/_mainbanner.scss */
 .mainbanner .layer-mask {
-  position: relative;
+  position: absolute;
   z-index: 99;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, #000000 100%);
-  background-image: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, black 100%);
-  background-image: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, black 100%);
-  background-image: -webkit-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, black 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 60%, #042c36 100%);
+  background-image: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 60%, black 100%);
+  background-image: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 60%, black 100%);
+  background-image: -webkit-gradient(to bottom, rgba(0, 0, 0, 0.0001) 60%, black 100%);
   background-repeat: repeat-x;
 }
 
@@ -23711,6 +23693,44 @@ img {
   /* line 19, ../../tools/src/sass/components/_instragram.scss */
   .instafeed.grid-gallery li {
     width: 33.333333%;
+  }
+}
+/* line 1, ../../tools/src/sass/components/_featurebox.scss */
+.inner-text-banner {
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 9, ../../tools/src/sass/components/_featurebox.scss */
+.feature.bordered {
+  padding: 32px;
+  border: 1px solid #ccc;
+}
+
+/* line 14, ../../tools/src/sass/components/_featurebox.scss */
+.feature {
+  margin-bottom: 24px;
+}
+
+/* line 18, ../../tools/src/sass/components/_featurebox.scss */
+.feature p:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 767px) {
+  /* line 23, ../../tools/src/sass/components/_featurebox.scss */
+  .feature.boxed,
+  .feature.bordered {
+    padding: 24px;
+  }
+}
+@media all and (max-width: 990px) {
+  /* line 30, ../../tools/src/sass/components/_featurebox.scss */
+  .feature .icon-lg {
+    font-size: 40px;
   }
 }
 /**

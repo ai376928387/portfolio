@@ -1,14 +1,21 @@
 var mr_firstSectionHeight,
     mr_nav,
     mr_navOuterHeight,
+    mr_socialbg,
     mr_navScrolled = false,
     mr_navFixed = false,
     mr_outOfSight = false,
     mr_floatingProjectSections,
     mr_scrollTop = 0;
+    mr_socialbgFixed = false;
     
 $(document).ready(function() {
-    
+
+    // Update scroll variable for scrolling functions
+
+    addEventListener('scroll', function() {
+        mr_scrollTop = window.pageYOffset;
+    }, false);
 
     // Navigation
 
@@ -46,6 +53,7 @@ $(document).ready(function() {
     // Fix nav to top while scrolling
 
     mr_nav = $('body .nav-container nav:first');
+    mr_socialbg = $('body .nav-container .social a');
     mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
     window.addEventListener("scroll", updateNav, false);
 
@@ -122,6 +130,10 @@ $(document).ready(function() {
                 mr_navScrolled = false;
                 mr_nav.removeClass('scrolled');
             }
+            if (mr_socialbgFixed) {
+                mr_socialbgFixed = false;
+                mr_socialbg.removeClass('fixed');
+            }
             return;
         }
 
@@ -136,6 +148,8 @@ $(document).ready(function() {
                 if (!mr_navFixed) {
                     mr_nav.addClass('fixed');
                     mr_navFixed = true;
+                    mr_socialbg.addClass('fixed');
+                    mr_socialbgFixed = true;
                 }
 
                 if (scrollY > mr_navOuterHeight * 2) {

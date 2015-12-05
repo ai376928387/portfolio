@@ -1,6 +1,6 @@
 /*!---------- 4. COLOURS ----------*/
 .bg-primary {
-  background: #47b475 !important;
+  background: #ccc !important;
 }
 .bg-secondary {
   background: $primary-color-2;
@@ -10,6 +10,9 @@
 }
 .bg-dark {
   background: $primary-color-1;
+}
+.bg-custom{
+    background-color: #e8dfd6 url(../images/pattern-noise.png);
 }
 .color-body {
   color: #666;

@@ -15,5 +15,4 @@
 			</div>
 		</div><!--end of row-->
 	</div><!--end of container-->
-	<a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
 </footer>

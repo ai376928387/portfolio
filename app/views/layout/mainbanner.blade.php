@@ -2,7 +2,7 @@
     <div class="background-image-holder">
         <img alt="image" class="background-image" src="images/main-banner.png" />
     </div>
-    <div class="container v-align-transform">
+    <div class="container inner-text-banner">
         <div class="row">
             <div class="col-sm-9 col-md-6 mb16">
                 <h1 class="mb40 mb-xs-16 large">Wicky Gao</h1>

@@ -229,7 +229,7 @@ nav.nav-centered .module.widget-handle {
 
 @media all and (max-width: 1100px) {
   .module.widget-handle {
-    padding: 0 16px;
+    padding: 0;
   }
 }
 
@@ -685,46 +685,18 @@ nav {
     .menu > li > a, .module.widget-handle i {
       opacity: 1;
     }
-    .has-dropdown:after {
-      color: #fff;
-    }
     &.fixed {
       background: $primary-color-1;
       .menu > li > a, .module.widget-handle i {
-        color: #292929;
-      }
-      .menu > .has-dropdown:after {
         color: #fff;
-        color: #292929;
       }
       .module.widget-handle {
         border-left: 1px solid #ccc;
       }
       .menu > li > a, .module.widget-handle i {
-        opacity: .5;
+        opacity: 0.9;
       }
     }
-  }
-  &.bg-dark {
-    .menu > li > a, .module.widget-handle i, .nav-utility {
-      color: #fff;
-      opacity: .7;
-    }
-    .module.widget-handle {
-      border-left: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .nav-utility, .nav-bar {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  }
-  &.transparent.fixed.bg-dark {
-    background: #292929;
-    .menu > li > a, .module.widget-handle i {
-      color: #fff;
-    }
-  }
-  &.nav-centered.outOfSight .logo {
-    display: none;
   }
 }
 
