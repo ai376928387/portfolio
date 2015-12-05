@@ -422,24 +422,6 @@ span.goalAmount {
   float:right;
 }
 /*end blog*/
-
-/*footer*/
-#footer {
-  clear: both;
-  overflow: hidden;
-  bottom:0;
-}
-p.footer-link {
-  background: url(../images/footer-bg.png) repeat-x rgba(255,255,255,0.4);
-  clear: both;
-  text-align: center;
-  font-size: 12px;
-  padding: 20px;
-  margin:20px 0 0 0px;
-  overflow: hidden;
-  color: #111;
-  line-height: 18px;
-}
 /* Small devices (tablets, 768px and up) */
 @media (min-width:768px) { 
   .header{

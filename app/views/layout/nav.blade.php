@@ -21,34 +21,32 @@
 				</ul>
 			</div>
 			<div class="module-group right">
-				<div class="module widget-handle left">
-					<div class="social">
-						<ul class="nav nav-pills navbar-right">
-							<li class="facebook">
-								<a href="https://www.facebook.com/gao.benny" target="_blank">
-									<i class="fa fa-facebook fa-2x"></i>
-								</a>
-							</li>
-							<li class="twitter">
-								<a href="https://twitter.com/BeiniGao"  target="_blank">
-									<i class="fa fa-twitter fa-2x"></i>
-								</a>
-							</li>
-							<li class="linkedin">
-								<a href="https://www.linkedin.com/profile/view?id=373946568"  target="_blank">
-									<i class="fa fa-linkedin fa-2x"></i>
-								</a>
-							</li>
-							<li class="github">
-								<a href="https://github.com/ai376928387"  target="_blank">
-									<i class="fa fa-github fa-2x"></i>
-								</a>
-							</li>
-						</ul>
+				<div class="social">
+					<div class="module widget-handle left facebook">
+						<a href="https://www.facebook.com/gao.benny" target="_blank">
+							<i class="fa fa-facebook fa-2x"></i>
+						</a>
+					</div>
+					<div class="module widget-handle left twitter">
+						<a href="https://twitter.com/BeiniGao"  target="_blank">
+							<i class="fa fa-twitter fa-2x"></i>
+						</a>
+					</div>
+					<div class="module widget-handle left linkedin">
+						<a href="https://www.linkedin.com/profile/view?id=373946568"  target="_blank">
+							<i class="fa fa-linkedin fa-2x"></i>
+						</a>
+					</div>
+					<div class="module widget-handle left github">
+						<a href="https://github.com/ai376928387"  target="_blank">
+							<i class="fa fa-github fa-2x"></i>
+						</a>
 					</div>
 				</div>
 			</div>
-			<!--end of module group-->
 		</div>
-	</nav>
+		<!--end of module group-->
+	</div>
+</nav>
+</div>
 </div>

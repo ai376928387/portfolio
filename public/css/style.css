@@ -20560,7 +20560,7 @@ nav.bg-dark .logo-dark {
 /* line 212, ../../tools/src/sass/layout/_header.scss */
 .module.widget-handle {
   border-left: 1px solid #ccc;
-  padding: 0 24px;
+  padding: 0;
   cursor: pointer;
   position: relative;
   -webkit-touch-callout: none;
@@ -21371,6 +21371,73 @@ hr.short-thick {
     margin-right: 6px;
   }
 }
+/*!---------- 36. FOOTERS ----------*/
+/* line 3, ../../tools/src/sass/layout/_footer.scss */
+footer.bg-dark a {
+  color: #fff;
+}
+
+/* line 8, ../../tools/src/sass/layout/_footer.scss */
+.footer-1 .logo {
+  max-height: 30px;
+}
+/* line 11, ../../tools/src/sass/layout/_footer.scss */
+.footer-1 .sub {
+  opacity: .5;
+}
+
+/* line 16, ../../tools/src/sass/layout/_footer.scss */
+.social-list {
+  margin: 0;
+}
+
+/* line 20, ../../tools/src/sass/layout/_footer.scss */
+.image-bg .social-list a {
+  color: #fff;
+}
+
+/* line 24, ../../tools/src/sass/layout/_footer.scss */
+.bg-dark .social-list a, .image-bg .social-list a {
+  color: #fff;
+  opacity: .5;
+}
+
+/* line 29, ../../tools/src/sass/layout/_footer.scss */
+.bg-dark .social-list a:hover, .image-bg .social-list a {
+  opacity: 1;
+}
+
+/* line 33, ../../tools/src/sass/layout/_footer.scss */
+.bg-light .social-list a {
+  color: #222;
+}
+
+/* line 37, ../../tools/src/sass/layout/_footer.scss */
+.back-to-top {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+/* line 43, ../../tools/src/sass/layout/_footer.scss */
+.back-to-top:hover {
+  opacity: 1;
+}
+
+/* line 48, ../../tools/src/sass/layout/_footer.scss */
+.bg-dark .back-to-top {
+  border-color: #fff;
+}
+/* line 50, ../../tools/src/sass/layout/_footer.scss */
+.bg-dark .back-to-top:active, .bg-dark .back-to-top:focus, .bg-dark .back-to-top:visited {
+  color: #fff;
+}
+/* line 53, ../../tools/src/sass/layout/_footer.scss */
+.bg-dark .back-to-top:hover {
+  background: none;
+}
+
 @media (-moz-device-pixel-ratio) {
   /* line 8, ../../tools/src/sass/layout/_browser.scss */
   .application-form .form-products-to-be-licenced .fieldset-wrapper .products_to_be_licensed_detail .fieldset-wrapper .export-markets-current .input-wrapper {
@@ -21985,7 +22052,7 @@ a:hover {
 
 /* line 11, ../../tools/src/sass/layout/_color.scss */
 .bg-dark {
-  background: #292929;
+  background: #042C36;
 }
 
 /* line 14, ../../tools/src/sass/layout/_color.scss */
@@ -23126,78 +23193,232 @@ Components
   _carousel.scss
   _thumbnails.scss
 **/
+/* line 1, ../../tools/src/sass/components/_btn.scss */
+.btn {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 2px solid #47b475;
+  padding: 0 26px;
+  height: 40px;
+  min-width: 150px;
+  line-height: 36px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  color: #47b475;
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  margin-right: 8px;
+  margin-bottom: 24px;
+}
+
+/* line 21, ../../tools/src/sass/components/_btn.scss */
+.btn:last-child,
+.btn:last-of-type {
+  margin-right: 0;
+}
+
+/* line 25, ../../tools/src/sass/components/_btn.scss */
+.btn:hover {
+  background: #47b475;
+  color: #fff;
+}
+
+/* line 29, ../../tools/src/sass/components/_btn.scss */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  min-width: 0;
+  padding: 0;
+  line-height: 38px;
+}
+
+/* line 37, ../../tools/src/sass/components/_btn.scss */
+.btn-lg, .btn-group-lg > .btn {
+  height: 50px;
+  line-height: 46px;
+  min-width: 200px;
+}
+
+/* line 42, ../../tools/src/sass/components/_btn.scss */
+.btn-icon.btn-lg, .btn-group-lg > .btn-icon.btn {
+  width: 50px;
+  height: 50px;
+  line-height: 49px;
+  font-size: 24px;
+  min-width: 0;
+}
+
+/* line 49, ../../tools/src/sass/components/_btn.scss */
+.btn-icon.btn-sm, .btn-group-sm > .btn-icon.btn {
+  width: 30px;
+  height: 30px;
+  line-height: 29px;
+  font-size: 13px;
+  min-width: 0;
+  padding: 0 0 0 1px !important;
+}
+
+/* line 57, ../../tools/src/sass/components/_btn.scss */
+.btn-sm, .btn-group-sm > .btn {
+  height: 30px;
+  font-size: 11px;
+  line-height: 27px;
+  min-width: 0;
+}
+
+/* line 63, ../../tools/src/sass/components/_btn.scss */
+.btn-filled {
+  background: #47b475;
+  color: #fff;
+}
+
+/* line 67, ../../tools/src/sass/components/_btn.scss */
+.btn-white,
+.image-bg .btn,
+.image-bg .btn:visited {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* line 73, ../../tools/src/sass/components/_btn.scss */
+.btn-white:hover,
+.image-bg .btn:hover,
+.image-bg .btn:visited:hover {
+  background: #fff;
+  color: #222;
+}
+
+/* line 79, ../../tools/src/sass/components/_btn.scss */
+.image-bg .btn.btn-filled,
+.image-bg .btn-filled:visited {
+  border-color: #47b475;
+}
+
+/* line 83, ../../tools/src/sass/components/_btn.scss */
+.image-bg .btn-filled:hover {
+  border-color: #fff;
+}
+
+/* line 86, ../../tools/src/sass/components/_btn.scss */
+.btn-rounded {
+  border-radius: 25px;
+}
+
+/* line 89, ../../tools/src/sass/components/_btn.scss */
+body.btn-rounded .btn {
+  border-radius: 25px !important;
+}
+
+/* line 92, ../../tools/src/sass/components/_btn.scss */
+.bg-light .btn {
+  border-color: #222;
+  color: #222;
+}
+
+/* line 96, ../../tools/src/sass/components/_btn.scss */
+.bg-light .btn:visited,
+.bg-light .btn:visited:hover {
+  color: #222;
+}
+
+/* line 100, ../../tools/src/sass/components/_btn.scss */
+.bg-light .btn-filled,
+.bg-light .btn-filled:visited {
+  color: #fff;
+}
+
+/* line 104, ../../tools/src/sass/components/_btn.scss */
+.btn:visited {
+  color: #47b475;
+}
+
+/* line 107, ../../tools/src/sass/components/_btn.scss */
+.btn-white:visited,
+.btn:visited:hover {
+  color: #fff;
+}
+
+/* line 111, ../../tools/src/sass/components/_btn.scss */
+.btn-white:visited:hover {
+  color: #222;
+}
+
+/* line 114, ../../tools/src/sass/components/_btn.scss */
+.btn-filled:visited {
+  color: #fff;
+}
+
+/* line 117, ../../tools/src/sass/components/_btn.scss */
+.btn.bg-dark {
+  color: #fff;
+  border-color: #292929;
+}
+
+/* line 121, ../../tools/src/sass/components/_btn.scss */
+.btn.bg-dark:hover {
+  background: #434343;
+}
+
+/* line 124, ../../tools/src/sass/components/_btn.scss */
+.bg-primary .btn {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* line 128, ../../tools/src/sass/components/_btn.scss */
+.bg-primary .btn:hover {
+  background: #fff;
+  color: #47b475;
+}
+
 /* social media button*/
-/* line 3, ../../tools/src/sass/components/_social_btn.scss */
-.social {
-  float: left;
-}
-/* line 5, ../../tools/src/sass/components/_social_btn.scss */
-.social ul {
-  float: left;
-  list-style: none;
-  color: #000;
-}
-/* line 9, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li {
-  float: left;
-}
-/* line 11, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li a {
+/* line 4, ../../tools/src/sass/components/_social_btn.scss */
+.social a {
   position: relative;
-  float: left;
-  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#005f74), to(rgba(240, 230, 220, 0.5)));
+  background-image: url("../images/flag.svg");
   width: 40px;
   height: 72px;
   text-align: center;
   color: #000;
   padding: 0 0 20px 0;
 }
-/* line 20, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li a:hover {
+/* line 13, ../../tools/src/sass/components/_social_btn.scss */
+.social a:hover {
   color: #fff;
 }
-
-/* line 28, ../../tools/src/sass/components/_social_btn.scss */
-.fa-facebook, .fa-twitter, .fa-github, .fa-linkedin {
-  padding: 12px 0 0 0;
+/* line 18, ../../tools/src/sass/components/_social_btn.scss */
+.social .fa-facebook, .social .fa-twitter, .social .fa-github, .social .fa-linkedin {
+  padding: 0;
   color: #fff;
 }
+/* line 23, ../../tools/src/sass/components/_social_btn.scss */
+.social .facebook a:hover {
+  background-image: url("../images/flag-facebook.svg");
+}
+/* line 27, ../../tools/src/sass/components/_social_btn.scss */
+.social .twitter a:hover {
+  background-image: url("../images/flag-twitter.svg");
+}
+/* line 31, ../../tools/src/sass/components/_social_btn.scss */
+.social .github a:hover {
+  background-image: url("../images/flag-github.svg");
+}
+/* line 35, ../../tools/src/sass/components/_social_btn.scss */
+.social .linkedin a:hover {
+  background-image: url("../images/flag-linkedin.svg");
+}
 
-/* line 33, ../../tools/src/sass/components/_social_btn.scss */
+/* line 40, ../../tools/src/sass/components/_social_btn.scss */
 .search-bar-box {
   float: left;
 }
 
 /* Pseudo Elements */
-/* line 40, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li a:after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  border: 20px solid transparent;
-  border-bottom: 20px solid #F3EBE5;
-  z-index: 0;
-}
-/* line 51, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li.facebook a:hover {
-  background: #3b5998;
-}
-/* line 54, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li.twitter a:hover {
-  background: #44ccf6;
-}
-/* line 57, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li.github a:hover {
-  background: #000000;
-}
-/* line 60, ../../tools/src/sass/components/_social_btn.scss */
-.social ul li.linkedin a:hover {
-  background: #1c66c2;
-}
-
 /*!---------- 5. SECTIONS ----------*/
 /* line 3, ../../tools/src/sass/components/_img.scss */
 section,
@@ -24074,37 +24295,16 @@ span.goalAmount {
 }
 
 /*end blog*/
-/*footer*/
-/* line 427, ../../tools/src/sass/pages/_main.page.scss */
-#footer {
-  clear: both;
-  overflow: hidden;
-  bottom: 0;
-}
-
-/* line 432, ../../tools/src/sass/pages/_main.page.scss */
-p.footer-link {
-  background: url(../images/footer-bg.png) repeat-x rgba(255, 255, 255, 0.4);
-  clear: both;
-  text-align: center;
-  font-size: 12px;
-  padding: 20px;
-  margin: 20px 0 0 0px;
-  overflow: hidden;
-  color: #111;
-  line-height: 18px;
-}
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* line 445, ../../tools/src/sass/pages/_main.page.scss */
+  /* line 427, ../../tools/src/sass/pages/_main.page.scss */
   .header {
     height: 120px;
   }
 }
 /* large devices (desktops, 992px and up) */
 @media (min-width: 1170px) {
-  /* line 454, ../../tools/src/sass/pages/_main.page.scss */
+  /* line 436, ../../tools/src/sass/pages/_main.page.scss */
   .header {
     height: 50px;
   }
