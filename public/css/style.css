@@ -21967,9 +21967,45 @@ a:hover {
     text-align: left !important;
   }
 }
-/* line 1, ../../tools/src/sass/layout/_color.scss */
+/*!---------- 4. COLOURS ----------*/
+/* line 2, ../../tools/src/sass/layout/_color.scss */
+.bg-primary {
+  background: #47b475 !important;
+}
+
+/* line 5, ../../tools/src/sass/layout/_color.scss */
 .bg-secondary {
-  background-color: #e8dfd6;
+  background: #e8dfd6;
+}
+
+/* line 8, ../../tools/src/sass/layout/_color.scss */
+.bg-white {
+  background: #fff;
+}
+
+/* line 11, ../../tools/src/sass/layout/_color.scss */
+.bg-dark {
+  background: #292929;
+}
+
+/* line 14, ../../tools/src/sass/layout/_color.scss */
+.color-body {
+  color: #666;
+}
+
+/* line 17, ../../tools/src/sass/layout/_color.scss */
+.color-primary {
+  color: #042C36 !important;
+}
+
+/* line 20, ../../tools/src/sass/layout/_color.scss */
+.color-red {
+  color: #e31d3b !important;
+}
+
+/* line 23, ../../tools/src/sass/layout/_color.scss */
+.color-white {
+  color: #fff;
 }
 
 /*!---------- 36. SPACING ----------*/
@@ -23162,6 +23198,204 @@ Components
   background: #1c66c2;
 }
 
+/*!---------- 5. SECTIONS ----------*/
+/* line 3, ../../tools/src/sass/components/_img.scss */
+section,
+footer {
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 9, ../../tools/src/sass/components/_img.scss */
+footer {
+  padding: 72px 0;
+}
+
+/* line 12, ../../tools/src/sass/components/_img.scss */
+.fullscreen {
+  height: 100vh;
+}
+
+/* line 15, ../../tools/src/sass/components/_img.scss */
+.bg-dark h1,
+nav.bg-dark h1,
+footer.bg-dark h1,
+.bg-primary h1,
+.bg-dark h2,
+nav.bg-dark h2,
+footer.bg-dark h2,
+.bg-primary h2,
+.bg-dark h3,
+nav.bg-dark h3,
+footer.bg-dark h3,
+.bg-primary h3,
+.bg-dark h4,
+nav.bg-dark h4,
+footer.bg-dark h4,
+.bg-primary h4,
+.bg-dark h5,
+nav.bg-dark h5,
+footer.bg-dark h5,
+.bg-primary h5,
+.bg-dark h6,
+nav.bg-dark h6,
+footer.bg-dark h6,
+.bg-primary h6 {
+  color: #ffffff;
+}
+
+/* line 41, ../../tools/src/sass/components/_img.scss */
+.bg-dark p,
+nav.bg-dark p,
+footer.bg-dark p,
+.bg-primary p,
+.bg-dark span,
+nav.bg-dark span,
+footer.bg-dark span,
+.bg-primary span,
+.bg-dark li,
+nav.bg-dark li,
+footer.bg-dark li,
+.bg-primary li {
+  color: #fefefe;
+}
+
+@media all and (max-width: 767px) {
+  /* line 56, ../../tools/src/sass/components/_img.scss */
+  section {
+    padding: 80px 0;
+  }
+}
+/* line 60, ../../tools/src/sass/components/_img.scss */
+.overlay:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #292929;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+/* line 71, ../../tools/src/sass/components/_img.scss */
+.overlay-heavy:before {
+  opacity: .6;
+}
+
+/* line 74, ../../tools/src/sass/components/_img.scss */
+.bg-light.overlay:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+/* line 85, ../../tools/src/sass/components/_img.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 88, ../../tools/src/sass/components/_img.scss */
+.image-bg h1,
+.image-bg h2,
+.image-bg h3,
+.image-bg h4,
+.image-bg h5,
+.image-bg h6 {
+  color: #ffffff;
+}
+
+/* line 96, ../../tools/src/sass/components/_img.scss */
+.image-bg p,
+.image-bg span,
+.image-bg li {
+  color: #ffffff;
+}
+
+/* line 101, ../../tools/src/sass/components/_img.scss */
+.image-bg .container,
+.image-bg div[class*='col-'] {
+  position: relative;
+  z-index: 3;
+}
+
+/* line 106, ../../tools/src/sass/components/_img.scss */
+.container.image-bg .row {
+  position: relative;
+  z-index: 3;
+}
+
+/* line 110, ../../tools/src/sass/components/_img.scss */
+.background-image-holder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #292929;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  opacity: 0;
+}
+
+/* line 125, ../../tools/src/sass/components/_img.scss */
+.background-image-holder img {
+  display: none;
+}
+
+/* line 128, ../../tools/src/sass/components/_img.scss */
+.background-multiply .background-image-holder {
+  background-color: #fc4f4f !important;
+  background-blend-mode: multiply;
+}
+
+/* line 132, ../../tools/src/sass/components/_img.scss */
+.background-image-holder.fadeIn {
+  opacity: 1;
+}
+
+/* line 135, ../../tools/src/sass/components/_img.scss */
+.parallax > .background-image-holder,
+.parallax .slides li > .background-image-holder {
+  height: 100vh;
+  top: -50vh;
+  transition: all 0s ease !important;
+  transition: opacity 0.3s ease !important;
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 143, ../../tools/src/sass/components/_img.scss */
+.parallax:first-child .slides li > .background-image-holder,
+.parallax:first-child .background-image-holder {
+  top: 0;
+}
+
+/* line 147, ../../tools/src/sass/components/_img.scss */
+.main-container > a:first-child + .parallax .background-image-holder {
+  top: 0;
+}
+
+@media all and (max-width: 767px) {
+  /* line 151, ../../tools/src/sass/components/_img.scss */
+  .parallax > .background-image-holder,
+  .parallax .slides li > .background-image-holder {
+    top: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+}
 /* line 1, ../../tools/src/sass/components/_fade.scss */
 .fade-half {
   opacity: 0.5;
@@ -23190,6 +23424,74 @@ Components
   opacity: 1;
 }
 
+/* line 2, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner h1.large {
+  font-weight: 400;
+}
+/* line 5, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner .v-align-transform {
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+/* line 8, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner ul.lead {
+  font-size: 16px;
+}
+/* line 11, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner li {
+  display: inline;
+}
+/* line 14, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner.opacity-black-position {
+  background-color: #000;
+}
+/* line 17, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner.opacity-black-position .background-image-holder {
+  transition: opacity .5s;
+  opacity: 0.5;
+}
+/* line 22, ../../tools/src/sass/components/_mainbanner.scss */
+.mainbanner .layer-mask {
+  position: relative;
+  z-index: 99;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, #000000 100%);
+  background-image: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, black 100%);
+  background-image: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, black 100%);
+  background-image: -webkit-gradient(to bottom, rgba(0, 0, 0, 0.0001) 30%, black 100%);
+  background-repeat: repeat-x;
+}
+
+/* line 1, ../../tools/src/sass/components/_instragram.scss */
+.instafeed.grid-gallery {
+  overflow: hidden;
+}
+/* line 3, ../../tools/src/sass/components/_instragram.scss */
+.instafeed.grid-gallery li {
+  width: 25%;
+  display: inline-block;
+  float: left;
+  padding: 8px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  opacity: 1;
+}
+/* line 12, ../../tools/src/sass/components/_instragram.scss */
+.instafeed.grid-gallery li:hover {
+  opacity: .9;
+}
+
+@media all and (max-width: 990px) {
+  /* line 19, ../../tools/src/sass/components/_instragram.scss */
+  .instafeed.grid-gallery li {
+    width: 33.333333%;
+  }
+}
 /**
 Pages
 

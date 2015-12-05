@@ -11850,8 +11850,19 @@ $(document).ready(function() {
         })
     }
 }); 
-$(document).ready(function() { 
-// Navigation
+var mr_firstSectionHeight,
+    mr_nav,
+    mr_navOuterHeight,
+    mr_navScrolled = false,
+    mr_navFixed = false,
+    mr_outOfSight = false,
+    mr_floatingProjectSections,
+    mr_scrollTop = 0;
+    
+$(document).ready(function() {
+    
+
+    // Navigation
 
     if (!$('nav').hasClass('fixed') && !$('nav').hasClass('absolute')) {
 
@@ -11911,11 +11922,108 @@ $(document).ready(function() {
         $(this).toggleClass('toggle-widget-handle');
     });
 
-    $('.search-widget-handle .search-form input').click(function(e){
+    $('.search-widget-handle .search-form input').click(function(e) {
         if (!e) e = window.event;
         e.stopPropagation();
     });
+
+    // Offscreen Nav
     
+    if($('.offscreen-toggle').length){
+        $('body').addClass('has-offscreen-nav');
+    }
+    else{
+        $('body').removeClass('has-offscreen-nav');
+    }
+    
+    $('.offscreen-toggle').click(function(){
+        $('.main-container').toggleClass('reveal-nav');
+        $('nav').toggleClass('reveal-nav');
+        $('.offscreen-container').toggleClass('reveal-nav');
+    });
+    
+    $('.main-container').click(function(){
+        if($(this).hasClass('reveal-nav')){
+            $(this).removeClass('reveal-nav');
+            $('.offscreen-container').removeClass('reveal-nav');
+            $('nav').removeClass('reveal-nav');
+        }
+    });
+    
+    $('.offscreen-container a').click(function(){
+        $('.offscreen-container').removeClass('reveal-nav');
+        $('.main-container').removeClass('reveal-nav');
+        $('nav').removeClass('reveal-nav');
+    });
+
+
+    function updateNav() {
+
+        var scrollY = mr_scrollTop;
+
+        if (scrollY <= 0) {
+            if (mr_navFixed) {
+                mr_navFixed = false;
+                mr_nav.removeClass('fixed');
+            }
+            if (mr_outOfSight) {
+                mr_outOfSight = false;
+                mr_nav.removeClass('outOfSight');
+            }
+            if (mr_navScrolled) {
+                mr_navScrolled = false;
+                mr_nav.removeClass('scrolled');
+            }
+            return;
+        }
+
+        if (scrollY > mr_firstSectionHeight) {
+            if (!mr_navScrolled) {
+                mr_nav.addClass('scrolled');
+                mr_navScrolled = true;
+                return;
+            }
+        } else {
+            if (scrollY > mr_navOuterHeight) {
+                if (!mr_navFixed) {
+                    mr_nav.addClass('fixed');
+                    mr_navFixed = true;
+                }
+
+                if (scrollY > mr_navOuterHeight * 2) {
+                    if (!mr_outOfSight) {
+                        mr_nav.addClass('outOfSight');
+                        mr_outOfSight = true;
+                    }
+                } else {
+                    if (mr_outOfSight) {
+                        mr_outOfSight = false;
+                        mr_nav.removeClass('outOfSight');
+                    }
+                }
+            } else {
+                if (mr_navFixed) {
+                    mr_navFixed = false;
+                    mr_nav.removeClass('fixed');
+                }
+                if (mr_outOfSight) {
+                    mr_outOfSight = false;
+                    mr_nav.removeClass('outOfSight');
+                }
+            }
+
+            if (mr_navScrolled) {
+                mr_navScrolled = false;
+                mr_nav.removeClass('scrolled');
+            }
+
+        }
+    }
+});
+jQuery(document).ready(function($) {
+	$( "#printcv" ).click(function() {
+	  	alert('still need to be done');
+	});
 });
 //progress bar 
 /*
