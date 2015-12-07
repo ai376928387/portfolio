@@ -6,6 +6,10 @@
 
 @include('layout.personal-describle')
 
+@include('layout.experience')
+
+@include('layout.projects')
+
 @include('layout.instagram')
 
 @stop

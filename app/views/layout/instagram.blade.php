@@ -1,4 +1,4 @@
-<section class="bg-white">
+<section class="bg-custom">
     <div class="container">
         <div class="row v-align-children">
             <div class="col-md-5 col-sm-6 text-center mb-xs-24">

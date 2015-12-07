@@ -12,7 +12,12 @@
   background: $primary-color-1;
 }
 .bg-custom{
-    background-color: #e8dfd6 url(../images/pattern-noise.png);
+    background: #e8dfd6 url(../images/pattern-noise.png);
+}
+.custom-border{
+	height:12px;
+	width:100%;
+    background: #e8dfd6 url(../images/custom-border.png) repeat-x;
 }
 .color-body {
   color: #666;
